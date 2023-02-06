@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/pages/addPost_page.dart';
 import 'package:instagram_ui/pages/home_page.dart';
+import 'package:instagram_ui/pages/notification_page.dart';
+import 'package:instagram_ui/pages/profil_page.dart';
+import 'package:instagram_ui/pages/search_page.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -13,10 +17,10 @@ class _MainViewState extends State<MainView> {
 
   var _pages = [
     HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    SearchPage(),
+    AddPostPage(),
+    NotificationPage(),
+    ProfilPage(),
   ];
 
   int currentPage = 0;
