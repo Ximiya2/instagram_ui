@@ -27,29 +27,97 @@ class _NotificationPageState extends State<NotificationPage> {
                   context: context,
                   builder: (context) => Container(
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: Colors.grey.shade900,
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start  ,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text('Filter', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 17),),
-                              SizedBox(
-                                width: 120,
+                          Center(
+                            child: Container(
+                              height: 3,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(40),
                               ),
-                              TextButton(
-                                  onPressed: (){},
-                                  child: Text('Clear', style: TextStyle(color: Colors.white,fontSize: 17),),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                flex: 11,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('Filter', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 17),),
+                                    ],
+                                  )),
+                              Expanded(
+                                flex: 9,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                 // crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    TextButton(
+                                        onPressed: (){},
+                                        child: Text('Clear', style: TextStyle(color: Colors.white,fontSize: 17),),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                          Divider(thickness: 1,color: Colors.black12,),
-                         
+                          Divider(thickness: 1,color: Colors.black,),
+                          Text('Categories', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 17),),
+                          SizedBox(height: 17,),
+                          Row(
+                            children: [
+                              Text('Tags & mentions', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
+
+                            ],
+                          ),
+                          SizedBox(height: 17,),
+                          Row(
+                            children: [
+                              Text('Tags & mentions', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
+
+                            ],
+                          ),
+                          SizedBox(height: 17,),
+                          Row(
+                            children: [
+                              Text('Tags & mentions', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
+
+                            ],
+                          ),
+                          SizedBox(height: 30,),
+                          Text('Account Types', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 17),),
+                          SizedBox(height: 17,),
+                          Row(
+                            children: [
+                              Text('Tags & mentions', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
+
+                            ],
+                          ),
+                          SizedBox(height: 17,),
+                          Row(
+                            children: [
+                              Text('Tags & mentions', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),),
+
+                            ],
+                          ),
+                          SizedBox(height: 17,),
+                          Divider(thickness: 1,color: Colors.black,),
+                         ElevatedButton(
+                             onPressed: (){},
+                             child:  Padding(
+                               padding: const EdgeInsets.symmetric(horizontal: 145),
+                               child: Text('Apply ', style: TextStyle(color: Colors.white,),),
+                             ),
+                         )
                         ],
                       ),
                     ),
@@ -61,20 +129,28 @@ class _NotificationPageState extends State<NotificationPage> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ListView.builder(
-              shrinkWrap: true,
-              //scrollDirection: Axis.vertical,
-              itemCount: notificationsList.length,
-                itemBuilder: (context, index) {
-                return NotificationsItem(
-                  context,
-                  notificationsList[index],
-                );
-               }
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //Text('Yesterday', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
+              Container(
+                height: 650,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  //scrollDirection: Axis.vertical,
+                  itemCount: notificationsList.length,
+                    itemBuilder: (context, index) {
+                    return NotificationsItem(
+                      context,
+                      notificationsList[index],
+                    );
+                   }
+                ),
+              )
+            ],
+          ),
         ),
       )
     );
