@@ -12,7 +12,7 @@ List<StoryModel> storiesList = [
 
 ];
 
-final List<PostModel> posts = [
+final List<PostModel> postsList = [
   PostModel(
       userName: "Brianne",
       userImage: 'assets/images/carrent/ph18.jpg',

@@ -36,7 +36,7 @@ class _NotificationPageState extends State<NotificationPage> {
                     builder: (BuildContext context, void Function(void Function()) setState) {
                       return Container(
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade900,
+                            color: Colors.grey.shade800,
                             borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
                         ),
                         child: Padding(
@@ -87,7 +87,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                   ),
                                 ],
                               ),
-                              Divider(thickness: 1,color: Colors.black,),
+                              Divider(thickness: 1,color: Colors.black12,),
                               Text('Categories', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 17),),
                               //SizedBox(height: 17,),
                               Row(

@@ -70,9 +70,9 @@ class _HomePageState extends State<HomePage> {
               child: ListView.builder(
                 shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: posts.length,
+                  itemCount: postsList.length,
                   itemBuilder: (ctr, i) {
-                  return itemOfPost(context, posts[i]);
+                  return itemOfPost(context, postsList[i]);
                   }),
             ),
           ],
