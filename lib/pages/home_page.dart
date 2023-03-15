@@ -72,7 +72,39 @@ class _HomePageState extends State<HomePage> {
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: postsList.length,
                   itemBuilder: (ctr, i) {
-                  return itemOfPost(context, postsList[i]);
+                  return itemOfPost(context, postsList[i],
+                      liked: () {
+                        postsList[i].isLiked = !postsList[i].isLiked;
+                        postsList[i].isLiked2 = !postsList[i].isLiked2;
+
+                        setState(() {});
+                      },
+                      liked2: () {
+                        postsList[i].isLiked = !postsList[i].isLiked;
+                        // posts[i].isLiked2 = !posts[i].isLiked2;
+                        setState(() {});
+                      });
+                  }),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: postsList.length,
+                  itemBuilder: (ctx, i) {
+                    return itemOfPost(context, postsList[postsList.length - 1 - i],
+                            liked: () {
+                      postsList[i].isLiked = !postsList[i].isLiked;
+                      postsList[i].isLiked2 = !postsList[i].isLiked2;
+
+                      setState(() {});
+                    },
+                            liked2: () {
+                      postsList[i].isLiked = (!postsList[i].isLiked) as String;
+                      //postsList[i].isLiked2 = !posts[i].isLiked2;
+                      setState(() {});
+                    });
                   }),
             ),
           ],

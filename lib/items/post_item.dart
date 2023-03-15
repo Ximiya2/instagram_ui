@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_ui/models/post_model.dart';
 
-Widget itemOfPost(BuildContext context, PostModel post) {
+Widget itemOfPost(BuildContext context, PostModel post,
+    {required void Function() liked, required void Function() liked2}) {
   return Container(
     color: Colors.white,
     margin: EdgeInsets.symmetric(vertical: 5),

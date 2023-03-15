@@ -17,37 +17,37 @@ final List<PostModel> postsList = [
       userName: "Brianne",
       userImage: 'assets/images/carrent/ph18.jpg',
       postImage: 'assets/images/carrent/ph19.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur', time: '', isLiked: '', isLiked2: ''
   ),
   PostModel(
       userName: "Henri",
       userImage: 'assets/images/carrent/ph1.jpg',
       postImage: 'assets/images/carrent/ph1.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur',time: '', isLiked: '', isLiked2: ''
   ),
   PostModel(
       userName: "Mariano",
       userImage: 'assets/images/carrent/ph3.jpg',
       postImage: 'assets/images/carrent/ph3.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur',time: '', isLiked: '', isLiked2: ''
   ),
   PostModel(
       userName: "Brianne",
       userImage: 'assets/images/carrent/ph18.jpg',
       postImage: 'assets/images/carrent/ph19.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur',time: '', isLiked: '', isLiked2: ''
   ),
   PostModel(
       userName: "Henri",
       userImage: 'assets/images/carrent/ph1.jpg',
       postImage: 'assets/images/carrent/ph1.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur',time: '', isLiked: '', isLiked2: ''
   ),
   PostModel(
       userName: "Mariano",
       userImage: 'assets/images/carrent/ph3.jpg',
       postImage: 'assets/images/carrent/ph3.jpg',
-      caption: 'Consequatur nihil aliquid omnis consequtur'
+      caption: 'Consequatur nihil aliquid omnis consequtur',time: '', isLiked: '', isLiked2: ''
   ),
 ];
 
